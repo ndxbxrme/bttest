@@ -24,6 +24,10 @@ import ImagePicker from 'react-native-image-picker';
 
 const BluetoothSerial = require('react-native-bluetooth-serial');
 
+import {
+  BleManager
+} from 'react-native-ble-plx';
+
 const Ogid = require('ogid');
 
 const Audio = require('./audio.html');
@@ -32,6 +36,7 @@ console.log('audiohtml', Audio)
 class Home extends React.Component {
   constructor () {
     super();
+    this.manager = new BleManager();
   }
   componentDidMount() {
     console.clear();
@@ -44,15 +49,15 @@ class Home extends React.Component {
           //console.log('unpaired', unpairedDevices);
         });
       }
-    )
-    /*
+    );
+    console.log('subscribing');
     const subscription = this.manager.onStateChange((state) => {
+      console.log('state change', state);
       if(state === 'PoweredOn') {
         this.scanAndConnect();
         subscription.remove();
       }
     }, true);
-    */
   }
   scanAndConnect() {
     console.log('sac23');
