@@ -12,7 +12,7 @@
   "dependencies": {
     "ogid": "git+https://github.com/ndxbxrme/ogid.git",
     "react": "16.9.0",
-    "react-native": "0.61.5",
+    "react-native": "0.62.3",
     "react-native-ble-plx": "^1.1.1",
     "react-native-bluetooth-serial": "^1.0.0-rc1",
     "react-native-gesture-handler": "^1.5.3",
